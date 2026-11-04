@@ -121,6 +121,31 @@ a:hover {
   transform: translateY(-1px);
 }
 
+/* Language Selector Dropdown */
+.lang-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--slate-100);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--slate-700);
+}
+
+.lang-selector select {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--slate-700);
+  cursor: pointer;
+  outline: none;
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
