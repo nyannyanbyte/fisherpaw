@@ -48,9 +48,9 @@ a:hover {
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 /* Header & Nav */
@@ -68,37 +68,45 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  min-height: 72px;
+  padding: 8px 0;
+  gap: 16px;
 }
 
 .brand-link {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--dark);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .brand-icon {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 14px;
   list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav-links a {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--slate-600);
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -107,12 +115,14 @@ a:hover {
 }
 
 .btn-nav {
-  padding: 8px 18px;
+  padding: 7px 16px;
   background: var(--primary);
   color: var(--white) !important;
   border-radius: var(--radius-full);
-  font-size: 0.9rem !important;
+  font-size: 0.85rem !important;
   font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
 }
 
@@ -637,6 +647,19 @@ a:hover {
 }
 
 /* Responsive */
+@media (max-width: 1050px) {
+  .nav-wrap {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 0;
+    gap: 12px;
+  }
+  .nav-links {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-content {
     grid-template-columns: 1fr;
